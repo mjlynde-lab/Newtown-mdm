@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Icons</title>
+  <style>
+    body { 
+      display: flex; 
+      flex-direction: column;
+      align-items: center; 
+      gap: 20px; 
+      padding: 40px;
+      background: #f0f0f0;
+      font-family: system-ui;
+    }
+    .icon {
+      border-radius: 22%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    h2 { margin: 20px 0 10px; color: #333; }
+    p { color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>Newtown MDM App Icons</h1>
+  <p>Right-click and save these images, or take screenshots</p>
+  
+  <h2>512x512 (for manifest)</h2>
+  <canvas id="icon512" width="512" height="512" class="icon"></canvas>
+  
+  <h2>192x192 (for manifest)</h2>
+  <canvas id="icon192" width="192" height="192" class="icon"></canvas>
+  
+  <h2>180x180 (Apple Touch Icon)</h2>
+  <canvas id="icon180" width="180" height="180" class="icon"></canvas>
+
+  <script>
+    function drawIcon(ctx, size) {
+      const s = size / 512;
+      
+      // Background
+      ctx.fillStyle = '#1E3A5F';
+      ctx.beginPath();
+      ctx.roundRect(0, 0, size, size, size * 0.18);
+      ctx.fill();
+      
+      // Outer swoosh
+      ctx.strokeStyle = '#7CBCE8';
+      ctx.lineWidth = 24 * s;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(120 * s, 100 * s);
+      ctx.quadraticCurveTo(60 * s, 180 * s, 100 * s, 300 * s);
+      ctx.quadraticCurveTo(130 * s, 380 * s, 170 * s, 420 * s);
+      ctx.stroke();
+      
+      // Foot outline
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = 20 * s;
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      ctx.moveTo(200 * s, 80 * s);
+      ctx.bezierCurveTo(160 * s, 80 * s, 140 * s, 130 * s, 140 * s, 200 * s);
+      ctx.bezierCurveTo(140 * s, 270 * s, 155 * s, 340 * s, 170 * s, 400 * s);
+      ctx.quadraticCurveTo(185 * s, 450 * s, 220 * s, 480 * s);
+      ctx.quadraticCurveTo(245 * s, 505 * s, 280 * s, 505 * s);
+      ctx.bezierCurveTo(305 * s, 505 * s, 330 * s, 490 * s, 355 * s, 460 * s);
+      ctx.quadraticCurveTo(400 * s, 410 * s, 420 * s, 340 * s);
+      ctx.bezierCurveTo(440 * s, 270 * s, 440 * s, 200 * s, 400 * s, 140 * s);
+      ctx.bezierCurveTo(370 * s, 90 * s, 310 * s, 60 * s, 250 * s, 70 * s);
+      ctx.quadraticCurveTo(220 * s, 75 * s, 200 * s, 80 * s);
+      ctx.stroke();
+      
+      // Inner curve
+      ctx.lineWidth = 16 * s;
+      ctx.beginPath();
+      ctx.moveTo(230 * s, 180 * s);
+      ctx.quadraticCurveTo(200 * s, 260 * s, 215 * s, 340 * s);
+      ctx.quadraticCurveTo(230 * s, 400 * s, 280 * s, 440 * s);
+      ctx.stroke();
+    }
+    
+    // Draw all sizes
+    [512, 192, 180].forEach(size => {
+      const canvas = document.getElementById('icon' + size);
+      const ctx = canvas.getContext('2d');
+      drawIcon(ctx, size);
+    });
+  </script>
+</body>
+</html>

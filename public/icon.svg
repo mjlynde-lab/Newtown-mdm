@@ -1,0 +1,45 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#1E3A5F"/>
+  
+  <!-- Outer swoosh (light blue arc) -->
+  <path
+    d="M 120 100 
+       Q 60 180, 100 300 
+       Q 130 380, 170 420"
+    stroke="#7CBCE8"
+    stroke-width="24"
+    stroke-linecap="round"
+    fill="none"
+  />
+  
+  <!-- Inner foot/ankle shape -->
+  <path
+    d="M 200 80
+       C 160 80, 140 130, 140 200
+       C 140 270, 155 340, 170 400
+       Q 185 450, 220 480
+       Q 245 505, 280 505
+       C 305 505, 330 490, 355 460
+       Q 400 410, 420 340
+       C 440 270, 440 200, 400 140
+       C 370 90, 310 60, 250 70
+       Q 220 75, 200 80Z"
+    stroke="#FFFFFF"
+    stroke-width="20"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  
+  <!-- Inner ankle curve detail -->
+  <path
+    d="M 230 180
+       Q 200 260, 215 340
+       Q 230 400, 280 440"
+    stroke="#FFFFFF"
+    stroke-width="16"
+    stroke-linecap="round"
+    fill="none"
+  />
+</svg>
