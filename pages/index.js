@@ -917,12 +917,11 @@ function OnboardingWizard({ onComplete, preferences, setPreferences, theme }) {
       <div style={{ padding: '16px 20px', borderBottom: `1px solid ${theme.border}` }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
-              <path d="M15 8 Q5 30, 20 55 Q25 62, 22 70" stroke="#7CBCE8" strokeWidth="3" fill="none" strokeLinecap="round"/>
-              <path d="M35 12 C32 18, 28 28, 26 40 C24 52, 24 62, 28 72 C30 78, 30 82, 26 86 C22 90, 16 92, 10 92 C6 92, 4 90, 5 86 C6 82, 12 78, 20 76 C28 74, 36 74, 42 78 C46 80, 48 82, 52 82" 
-                    stroke={theme.text} strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-            </svg>
-            <span style={{ color: theme.text, fontWeight: 700 }}>MDM Workstation</span>
+            <img 
+              src="/logo.png" 
+              alt="Newtown Foot & Ankle Specialists" 
+              style={{ height: 36, width: 'auto' }}
+            />
           </div>
           <button 
             onClick={handleSkip}
@@ -2180,40 +2179,12 @@ export default function NewtownMDM() {
         <header style={{ maxWidth: 900, margin: '0 auto 16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-              {/* Newtown Foot & Ankle Logo - Stylized foot with swoosh */}
-              <svg width="56" height="56" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Light blue swoosh arc - curves from top around the ankle */}
-                <path d="M15 8 Q5 30, 20 55 Q25 62, 22 70" stroke="#7CBCE8" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                
-                {/* Outer foot/ankle contour - navy */}
-                <path d="M35 12 
-                         C32 18, 28 28, 26 40 
-                         C24 52, 24 62, 28 72 
-                         C30 78, 30 82, 26 86 
-                         C22 90, 16 92, 10 92
-                         C6 92, 4 90, 5 86
-                         C6 82, 12 78, 20 76
-                         C28 74, 36 74, 42 78
-                         C46 80, 48 82, 52 82" 
-                      stroke={themeMode === 'dark' ? '#94A3B8' : '#1E3A5F'} strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                
-                {/* Inner ankle/arch line */}
-                <path d="M45 16
-                         C42 24, 38 36, 36 48
-                         C34 60, 35 70, 38 78" 
-                      stroke={themeMode === 'dark' ? '#94A3B8' : '#1E3A5F'} strokeWidth="2" fill="none" strokeLinecap="round"/>
-                
-                {/* Second inner line for depth */}
-                <path d="M52 20
-                         C50 28, 46 40, 44 52
-                         C42 64, 44 74, 48 80" 
-                      stroke={themeMode === 'dark' ? '#94A3B8' : '#1E3A5F'} strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-              </svg>
-              <div>
-                <div style={{ fontSize: 13, color: '#7CBCE8', fontWeight: 700, letterSpacing: 1 }}>NEWTOWN</div>
-                <div style={{ fontSize: 12, color: themeMode === 'dark' ? '#CBD5E1' : '#1E3A5F', fontWeight: 600 }}>FOOT & ANKLE</div>
-                <div style={{ fontSize: 12, color: themeMode === 'dark' ? '#CBD5E1' : '#1E3A5F', fontWeight: 600 }}>SPECIALISTS</div>
-              </div>
+              {/* Newtown Foot & Ankle Logo */}
+              <img 
+                src="/logo.png" 
+                alt="Newtown Foot & Ankle Specialists" 
+                style={{ height: 50, width: 'auto' }}
+              />
             </div>
             <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
               <button onClick={() => setShowPreferences(true)} style={{ ...btnStyle(false), padding: 10 }} title="Preferences">⚙️</button>
