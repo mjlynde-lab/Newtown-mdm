@@ -275,10 +275,10 @@ function PreferencesModal({ isOpen, onClose, preferences, setPreferences, theme 
                 onChange={(e) => updatePref('injection', 'needle', e.target.value)}
                 style={inputStyle}
               >
-                <option value="25g 1.5\"">25g 1.5"</option>
-                <option value="25g 1\"">25g 1"</option>
-                <option value="27g 1.25\"">27g 1.25"</option>
-                <option value="22g 1.5\"">22g 1.5"</option>
+                <option value='25g 1.5"'>25g 1.5"</option>
+                <option value='25g 1"'>25g 1"</option>
+                <option value='27g 1.25"'>27g 1.25"</option>
+                <option value='22g 1.5"'>22g 1.5"</option>
               </select>
               
               <label style={labelStyle}>Max Injections Per Site Before Discussion</label>
